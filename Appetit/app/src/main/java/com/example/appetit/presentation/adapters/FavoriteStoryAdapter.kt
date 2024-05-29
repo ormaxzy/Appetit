@@ -8,7 +8,7 @@ import android.view.ViewOutlineProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.appetit.R
-import com.example.appetit.data.models.FavoriteRecipe
+import com.example.appetit.domain.models.FavoriteRecipe
 import com.example.appetit.databinding.ItemFavoriteStoryBinding
 import kotlin.math.min
 

@@ -1,27 +1,11 @@
 package com.example.appetit.domain.repositories
 
 import androidx.lifecycle.LiveData
-import com.example.appetit.data.local.FavoriteRecipeDao
-import com.example.appetit.data.models.FavoriteRecipe
-import javax.inject.Inject
+import com.example.appetit.domain.models.FavoriteRecipe
 
-class FavoriteRepository @Inject constructor(
-    private val favoriteRecipeDao: FavoriteRecipeDao
-) {
-    suspend fun insertFavoriteRecipe(favoriteRecipe: FavoriteRecipe) {
-        favoriteRecipeDao.insertFavoriteRecipe(favoriteRecipe)
-    }
-
-    suspend fun deleteFavoriteRecipeByUri(uri: String) {
-        favoriteRecipeDao.deleteFavoriteRecipeByUri(uri)
-    }
-
-    fun isFavorite(uri: String): LiveData<FavoriteRecipe?> {
-        return favoriteRecipeDao.getFavoriteByUri(uri)
-    }
-
-    fun getAllFavoriteRecipes(): LiveData<List<FavoriteRecipe>> {
-        return favoriteRecipeDao.getAllFavoriteRecipes()
-    }
+interface FavoriteRepository {
+    suspend fun insertFavoriteRecipe(favoriteRecipe: FavoriteRecipe)
+    suspend fun deleteFavoriteRecipeByUri(uri: String)
+    fun isFavorite(uri: String): LiveData<FavoriteRecipe?>
+    fun getAllFavoriteRecipes(): LiveData<List<FavoriteRecipe>>
 }
-

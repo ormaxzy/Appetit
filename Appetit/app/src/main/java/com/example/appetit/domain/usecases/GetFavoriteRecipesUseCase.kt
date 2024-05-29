@@ -1,7 +1,7 @@
 package com.example.appetit.domain.usecases
 
 import androidx.lifecycle.LiveData
-import com.example.appetit.data.models.FavoriteRecipe
+import com.example.appetit.domain.models.FavoriteRecipe
 import com.example.appetit.domain.repositories.FavoriteRepository
 import javax.inject.Inject
 

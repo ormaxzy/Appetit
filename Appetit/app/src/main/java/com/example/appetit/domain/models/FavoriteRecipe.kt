@@ -1,4 +1,4 @@
-package com.example.appetit.data.models
+package com.example.appetit.domain.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

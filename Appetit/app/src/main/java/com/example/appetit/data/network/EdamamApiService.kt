@@ -1,6 +1,6 @@
 package com.example.appetit.data.network
 
-import com.example.appetit.data.models.RecipeResponse
+import com.example.appetit.domain.models.RecipeResponse
 import okhttp3.Interceptor
 import okhttp3.Response
 import retrofit2.http.GET

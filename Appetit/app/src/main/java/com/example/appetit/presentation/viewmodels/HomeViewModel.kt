@@ -8,8 +8,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.appetit.data.models.FavoriteRecipe
-import com.example.appetit.data.models.Recipe
+import com.example.appetit.domain.models.FavoriteRecipe
+import com.example.appetit.domain.models.Recipe
 import com.example.appetit.domain.usecases.GetFavoriteRecipesUseCase
 import com.example.appetit.domain.usecases.GetRandomRecipeUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -19,7 +19,7 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     application: Application,
-    getFavoriteRecipesUseCase: GetFavoriteRecipesUseCase,
+    private val getFavoriteRecipesUseCase: GetFavoriteRecipesUseCase,
     private val getRandomRecipeUseCase: GetRandomRecipeUseCase
 ) : AndroidViewModel(application) {
 

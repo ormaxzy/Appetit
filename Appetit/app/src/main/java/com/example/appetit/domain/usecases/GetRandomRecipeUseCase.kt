@@ -1,6 +1,6 @@
 package com.example.appetit.domain.usecases
 
-import com.example.appetit.data.models.Recipe
+import com.example.appetit.domain.models.Recipe
 import com.example.appetit.domain.repositories.RecipeRepository
 import javax.inject.Inject
 

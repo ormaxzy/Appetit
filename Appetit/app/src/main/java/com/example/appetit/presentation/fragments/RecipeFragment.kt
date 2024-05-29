@@ -12,7 +12,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.appetit.R
-import com.example.appetit.data.models.Recipe
+import com.example.appetit.domain.models.Recipe
 import com.example.appetit.databinding.FragmentRecipeBinding
 import com.example.appetit.presentation.adapters.IngredientsAdapter
 import com.example.appetit.presentation.viewmodels.RecipeViewModel

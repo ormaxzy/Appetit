@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.appetit.data.models.FavoriteRecipe
+import com.example.appetit.domain.models.FavoriteRecipe
 import com.example.appetit.databinding.ItemFavoriteBinding
 
 class FavoriteAdapter(private val onClick: (FavoriteRecipe) -> Unit) :

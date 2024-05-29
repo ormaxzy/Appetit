@@ -1,4 +1,4 @@
-package com.example.appetit.data.models
+package com.example.appetit.domain.models
 
 import com.google.gson.annotations.SerializedName
 
@@ -42,7 +42,7 @@ data class Recipe(
     @SerializedName("calories") val calories: Double,
     @SerializedName("totalWeight") val totalWeight: Double,
     @SerializedName("cuisineType") val cuisineType: List<String>?,
-    @SerializedName("mealType") val mealType: List<String>? ,
+    @SerializedName("mealType") val mealType: List<String>?,
     @SerializedName("dishType") val dishType: List<String>?,
     @SerializedName("instructions") val instructions: List<String>?,
     @SerializedName("tags") val tags: List<String>?,

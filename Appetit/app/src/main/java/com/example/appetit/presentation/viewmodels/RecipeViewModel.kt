@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.appetit.data.models.FavoriteRecipe
-import com.example.appetit.data.models.Recipe
+import com.example.appetit.domain.models.FavoriteRecipe
+import com.example.appetit.domain.models.Recipe
 import com.example.appetit.domain.usecases.AddToFavoritesUseCase
 import com.example.appetit.domain.usecases.GetRecipeUseCase
 import com.example.appetit.domain.usecases.IsFavoriteUseCase
