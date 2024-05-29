@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#FEBF00</color>
+    <color name="primaryColorVariant">#E79A3F</color>
+    <color name="secondaryColor">#BDBDBD</color>
+    <color name="secondaryColorVariant">#9E9E9E</color>
+    <color name="backgroundColor">#212121</color>
+    <color name="surfaceColor">#3A3838</color>
+    <color name="errorColor">#CF561D</color>
+    <color name="onPrimaryColor">#000000</color>
+    <color name="onSecondaryColor">#000000</color>
+    <color name="onBackgroundColor">#A8A5A5</color>
+    <color name="onSurfaceColor">#E6E4E2</color>
+    <color name="onErrorColor">#FFFFFF</color>
+    <color name="RandomBackgroundColor">#292929</color>
+    <color name="LinkColor">#E4BA23</color>
+    <color name="FavoriteStoryColor">#8C4F1B</color>
+</resources>

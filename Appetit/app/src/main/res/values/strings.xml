@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">Appetit</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_random">Random</string>
+    <string name="your_favorite_recipes_will_be_here">Your favorite recipes will be here!</string>
+    <string name="select_a_category">Select a category:</string>
+    <string name="ingredients">Ingredients:</string>
+    <string name="cuisine">Cuisine:</string>
+    <string name="meal">Meal:</string>
+    <string name="dish">Dish:</string>
+    <string name="back_button_description">Back</string>
+    <string name="apply_btn">Apply</string>
+    <string name="clear_btn">Clear</string>
+    <string name="instruction">Instruction:</string>
+    <string name="see_all_favorites">See all favorites\n</string>
+    <string name="all_favorites">All Favorites</string>
+    <string name="random_recipes">Random recipes: </string>
+    <string name="search_error">Nothing found for your query :(\nTry adjusting your filters</string>
+    <string name="home_error">Check your internet connection \n or try again later :(</string>
+    <string name="theme_switch">light/dark</string>
+    <string name="enter_name_or_ingredient">Enter name or ingredient</string>
+    <string name="unknown">Unknown</string>
+    <string name="kcal_format">%1$d kcal</string>
+    <string name="any">Any</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="dinner">Dinner</string>
+    <string name="lunch">Lunch</string>
+    <string name="snack">Snack</string>
+    <string name="teatime">Teatime</string>
+    <string-array name="cuisine_types">
+        <item>Any</item>
+        <item>American</item>
+        <item>Asian</item>
+        <item>British</item>
+        <item>Caribbean</item>
+        <item>Central Europe</item>
+        <item>Chinese</item>
+        <item>Eastern Europe</item>
+        <item>French</item>
+        <item>Indian</item>
+        <item>Italian</item>
+        <item>Japanese</item>
+        <item>Kosher</item>
+        <item>Mediterranean</item>
+        <item>Mexican</item>
+        <item>Middle Eastern</item>
+        <item>Nordic</item>
+        <item>South American</item>
+        <item>South East Asian</item>
+    </string-array>
+    <string-array name="meal_types">
+        <item>Any</item>
+        <item>Breakfast</item>
+        <item>Dinner</item>
+        <item>Lunch</item>
+        <item>Snack</item>
+        <item>Teatime</item>
+    </string-array>
+    <string-array name="dish_types">
+        <item>Any</item>
+        <item>Biscuits and cookies</item>
+        <item>Bread</item>
+        <item>Cereals</item>
+        <item>Condiments and sauces</item>
+        <item>Desserts</item>
+        <item>Drinks</item>
+        <item>Main course</item>
+        <item>Pancake</item>
+        <item>Preps</item>
+        <item>Preserve</item>
+        <item>Salad</item>
+        <item>Sandwiches</item>
+        <item>Side dish</item>
+        <item>Soup</item>
+        <item>Starter</item>
+        <item>Sweets</item>
+    </string-array>
+    <string-array name="health_labels">
+        <item>Any</item>
+        <item>alcohol-cocktail</item>
+        <item>alcohol-free</item>
+        <item>celery-free</item>
+        <item>crustacean-free</item>
+        <item>dairy-free</item>
+        <item>DASH</item>
+        <item>egg-free</item>
+        <item>fish-free</item>
+        <item>fodmap-free</item>
+        <item>gluten-free</item>
+        <item>immuno-supportive</item>
+        <item>keto-friendly</item>
+        <item>kidney-friendly</item>
+        <item>kosher</item>
+        <item>low-fat-abs</item>
+        <item>low-potassium</item>
+        <item>low-sugar</item>
+        <item>lupine-free</item>
+        <item>Mediterranean</item>
+        <item>mollusk-free</item>
+        <item>mustard-free</item>
+        <item>no-oil-added</item>
+        <item>paleo</item>
+        <item>peanut-free</item>
+        <item>pescatarian</item>
+        <item>pork-free</item>
+        <item>red-meat-free</item>
+        <item>sesame-free</item>
+        <item>shellfish-free</item>
+        <item>soy-free</item>
+        <item>sugar-conscious</item>
+        <item>sulfite-free</item>
+        <item>tree-nut-free</item>
+        <item>vegan</item>
+        <item>vegetarian</item>
+        <item>wheat-free</item>
+    </string-array>
+    <string-array name="meal_types_random">
+        <item>Breakfast</item>
+        <item>Dinner</item>
+        <item>Lunch</item>
+        <item>Snack</item>
+        <item>Teatime</item>
+    </string-array>
+</resources>

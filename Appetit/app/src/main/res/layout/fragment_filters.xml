@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent" android:layout_width="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <ImageButton
+        android:id="@+id/applyButton"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/apply_btn"
+        android:src="@drawable/apply_icon"
+        android:fontFamily="@font/lora_font"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:backgroundTint="@color/primaryColor"
+        app:tint="@color/onPrimaryColor"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp" />
+
+    <ImageButton
+        android:id="@+id/clearButton"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/apply_btn"
+        android:src="@drawable/clear_icon"
+        android:fontFamily="@font/lora_font"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:backgroundTint="@color/errorColor"
+        app:tint="@color/onErrorColor"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mealTypeCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/surfaceColor"
+        app:layout_constraintTop_toBottomOf="@+id/applyButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/mealTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meal Type"
+                android:fontFamily="@font/lora_font"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/onBackgroundColor"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/mealTypeRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/mealTypeTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radio_breakfast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Breakfast"
+                    android:textColor="@color/onBackgroundColor"
+                    android:buttonTint="@color/primaryColorVariant"/>
+
+                <RadioButton
+                    android:id="@+id/radio_dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dinner"
+                    android:textColor="@color/onBackgroundColor"
+                    android:buttonTint="@color/primaryColorVariant"/>
+
+                <RadioButton
+                    android:id="@+id/radio_lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lunch"
+                    android:textColor="@color/onBackgroundColor"
+                    android:buttonTint="@color/primaryColorVariant"/>
+
+                <RadioButton
+                    android:id="@+id/radio_snack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Snack"
+                    android:textColor="@color/onBackgroundColor"
+                    android:buttonTint="@color/primaryColorVariant"/>
+
+                <RadioButton
+                    android:id="@+id/radio_teatime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teatime"
+                    android:textColor="@color/onBackgroundColor"
+                    android:buttonTint="@color/primaryColorVariant"/>
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cuisineTypeCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/surfaceColor"
+        app:layout_constraintTop_toBottomOf="@id/mealTypeCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_margin="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/cuisineTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuisine Type"
+                android:fontFamily="@font/lora_font"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/onBackgroundColor"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/cuisineTypeSpinnerContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spinner_background"
+                app:layout_constraintTop_toBottomOf="@+id/cuisineTypeTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <Spinner
+                    android:id="@+id/cuisineTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:entries="@array/cuisine_types"
+                    android:paddingEnd="32dp"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/angle_down"
+                    app:tint="@color/primaryColorVariant" />
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dishTypeCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/surfaceColor"
+        app:layout_constraintTop_toBottomOf="@id/cuisineTypeCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/dishTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dish Type"
+                android:fontFamily="@font/lora_font"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/onBackgroundColor"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/dishTypeSpinnerContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spinner_background"
+                app:layout_constraintTop_toBottomOf="@+id/dishTypeTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <Spinner
+                    android:id="@+id/dishTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:entries="@array/dish_types"
+                    android:paddingEnd="32dp"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/angle_down"
+                    app:tint="@color/primaryColorVariant" />
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/healthCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/surfaceColor"
+        app:layout_constraintTop_toBottomOf="@id/dishTypeCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/healthTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health"
+                android:fontFamily="@font/lora_font"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/onBackgroundColor"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/healthSpinnerContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spinner_background"
+                app:layout_constraintTop_toBottomOf="@+id/healthTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <Spinner
+                    android:id="@+id/healthSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:entries="@array/health_labels"
+                    android:paddingEnd="32dp"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/angle_down"
+                    app:tint="@color/primaryColorVariant" />
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="loading_texts">
+        <item>Chopping fresh vegetables...</item>
+        <item>Washing the dishes...</item>
+        <item>Going to the store for groceries...</item>
+        <item>Asking grandma for a recipe...</item>
+        <item>Stealing the secret ingredient from Mr. Krabs...</item>
+        <item>Frying the potatoes...</item>
+        <item>Boiling the water...</item>
+        <item>Chopping the onions...</item>
+        <item>Seasoning the meat...</item>
+        <item>Preheating the oven...</item>
+        <item>Mixing the ingredients...</item>
+        <item>Serving the dish...</item>
+        <item>Measuring the spices...</item>
+        <item>Grating the cheese...</item>
+        <item>Whisking the eggs...</item>
+        <item>Slicing the bread...</item>
+        <item>Sautéing the garlic...</item>
+        <item>Grilling the chicken...</item>
+        <item>Baking the cake...</item>
+        <item>Marinating the tofu...</item>
+        <item>Simmering the sauce...</item>
+        <item>Steaming the vegetables...</item>
+        <item>Rolling the dough...</item>
+        <item>Toasting the nuts...</item>
+        <item>Blending the smoothie...</item>
+        <item>Preparing the salad...</item>
+        <item>Cooking the pasta...</item>
+        <item>Broiling the fish...</item>
+        <item>Peeling the potatoes...</item>
+        <item>Roasting the veggies...</item>
+    </string-array>
+</resources>

@@ -1,0 +1,229 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragments.RecipeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/posterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/rounded_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/posterImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_overlay" />
+
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Back"
+            android:padding="14dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/angle_left"
+            app:layout_constraintStart_toStartOf="@id/posterLayout"
+            app:layout_constraintTop_toTopOf="@id/posterLayout"
+            app:tint="@color/primaryColor" />
+
+        <ImageButton
+            android:id="@+id/addToFavoriteBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Back"
+            android:scaleType="center"
+            android:layout_marginHorizontal="7dp"
+            android:src="@drawable/star"
+            app:layout_constraintEnd_toEndOf="@id/posterLayout"
+            app:layout_constraintTop_toTopOf="@id/posterLayout"
+            />
+
+        <LinearLayout
+            android:id="@+id/typeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/posterLayout"
+            app:layout_constraintEnd_toEndOf="@id/posterLayout"
+            app:layout_constraintStart_toStartOf="@id/posterLayout">
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/labelTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/lora_font"
+                android:textAlignment="center"
+                android:textColor="@color/onSurfaceColor"
+                android:textStyle="bold"
+                app:sizeToFit="true" />
+
+            <TextView
+                android:id="@+id/cuisineTypeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lora_font"
+                android:text="@string/cuisine"
+                android:textAlignment="center"
+                android:textColor="@color/onSurfaceColor"
+                android:textSize="12sp"
+                android:textStyle="bold"
+
+
+                />
+
+            <TextView
+                android:id="@+id/cuisineTypeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:fontFamily="@font/lora_font"
+                android:textAlignment="center"
+                android:textColor="@color/onSurfaceColor"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/mealTypeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lora_font"
+                android:text="@string/meal"
+                android:textAlignment="center"
+                android:textColor="@color/onSurfaceColor"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mealTypeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:fontFamily="@font/lora_font"
+                android:textAlignment="center"
+                android:textColor="@color/onSurfaceColor"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dishTypeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lora_font"
+                android:text="@string/dish"
+                android:textAlignment="center"
+                android:textColor="@color/onSurfaceColor"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dishTypeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/lora_font"
+                android:textAlignment="center"
+                android:textColor="@color/onSurfaceColor"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ingredientsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/lora_italic_font"
+            android:padding="10dp"
+            android:text="@string/ingredients"
+            android:textColor="@color/secondaryColorVariant"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/posterLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ingredientsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/lora_font"
+            android:lineSpacingExtra="4sp"
+            android:paddingHorizontal="22dp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingredientsTextView" />
+
+        <TextView
+            android:id="@+id/instructionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/lora_italic_font"
+            android:padding="10dp"
+            android:text="@string/instruction"
+            android:textColor="@color/secondaryColorVariant"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingredientsRecyclerView" />
+
+        <Button
+            android:id="@+id/openInBrowserButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open In Browser"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/onPrimaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/instructionTextView"
+            android:layout_marginStart="10dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:fontFamily="@font/lora_italic_font"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tagsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_italic_font"
+            android:lineSpacingExtra="4sp"
+            android:padding="16dp"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/openInBrowserButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
