@@ -30,6 +30,8 @@ Appetit - это приложение, которое позволяет пол�
 ### Персонализация
 Я использовал Shared Preferences для сохранения настроек пользователя, таких как тема приложения (светлая/темная). Это позволяет сохранять пользовательские предпочтения даже после перезапуска приложения.
 
+*Сборка стандартная: (Build -> Build App Bundle(s) / APK(s) -> Build APK(s))*
+
 Я надеюсь, что этот проект продемонстрирует мои навыки и опыт в разработке Android-приложений с использованием Kotlin. Буду рад ответить на любые вопросы или обсудить дальнейшие детали. Спасибо за рассмотрение моей кандидатуры!
 
 *************************
@@ -65,5 +67,7 @@ I paid special attention to writing readable and understandable code, using mean
 
 ### Personalization
 I used Shared Preferences to save user settings such as app theme (light/dark). This allows user preferences to be retained even after restarting the app.
+
+*Standard build: (Build -> Build App Bundle(s) / APK(s) -> Build APK(s))*
 
 I hope this project demonstrates my skills and experience in developing Android applications using Kotlin. I am happy to answer any questions or discuss further details. Thank you for considering my application!
