@@ -7,7 +7,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <FrameLayout
             android:id="@+id/posterLayout"
@@ -197,10 +197,11 @@
             android:id="@+id/openInBrowserButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Open In Browser"
+            android:text="@string/open_in_browser"
             android:backgroundTint="@color/primaryColor"
             android:textColor="@color/onPrimaryColor"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/openInWebViewButton"
             app:layout_constraintTop_toBottomOf="@id/instructionTextView"
             android:layout_marginStart="10dp"
             android:paddingHorizontal="16dp"
@@ -209,6 +210,45 @@
             android:textStyle="bold"
             android:textSize="14sp" />
 
+        <Button
+            android:id="@+id/openInWebViewButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_recipe_here"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/onPrimaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/instructionTextView"
+            app:layout_constraintEnd_toStartOf="@id/openInBrowserButton"
+
+            android:layout_marginStart="10dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:fontFamily="@font/lora_italic_font"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <ProgressBar
+            android:id="@+id/webViewProgressBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:indeterminate="true"
+            app:layout_constraintTop_toBottomOf="@id/openInWebViewButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <WebView
+            android:id="@+id/recipeWebView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@id/openInWebViewButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/tagsTextView"
@@ -224,6 +264,6 @@
             android:textAlignment="textEnd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/openInBrowserButton" />
+            app:layout_constraintTop_toBottomOf="@id/recipeWebView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

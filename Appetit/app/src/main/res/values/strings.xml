@@ -28,6 +28,9 @@
     <string name="lunch">Lunch</string>
     <string name="snack">Snack</string>
     <string name="teatime">Teatime</string>
+    <string name="open_recipe_here">Open Recipe Here</string>
+    <string name="hide_recipe">Hide Recipe</string>
+    <string name="open_in_browser">Open In Browser</string>
     <string-array name="cuisine_types">
         <item>Any</item>
         <item>American</item>

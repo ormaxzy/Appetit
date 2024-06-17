@@ -6,14 +6,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebSettings
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.appetit.R
-import com.example.appetit.domain.models.Recipe
 import com.example.appetit.databinding.FragmentRecipeBinding
+import com.example.appetit.domain.models.Recipe
 import com.example.appetit.presentation.adapters.IngredientsAdapter
 import com.example.appetit.presentation.viewmodels.RecipeViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -38,6 +41,7 @@ class RecipeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupViewModel()
         setupBackButton()
+        setupWebView()
     }
 
     private fun setupViewModel() {
@@ -84,7 +88,7 @@ class RecipeFragment : Fragment() {
                 .load(recipe.image)
                 .into(posterImageView)
 
-            setupButton(recipe.url)
+            setupButtons(recipe.url)
             tagsTextView.text = recipe.tags?.joinToString(", ")
 
             addToFavoriteBtn.setOnClickListener {
@@ -106,10 +110,37 @@ class RecipeFragment : Fragment() {
         binding.addToFavoriteBtn.setImageResource(favoriteDrawable)
     }
 
-    private fun setupButton(url: String) {
+    private fun setupButtons(url: String) {
         binding.openInBrowserButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
             startActivity(intent)
+        }
+        binding.openInWebViewButton.setOnClickListener {
+            if (binding.recipeWebView.visibility == View.GONE) {
+                binding.recipeWebView.apply {
+                    visibility = View.VISIBLE
+                    binding.webViewProgressBar.visibility = View.VISIBLE
+                    webViewClient = object : WebViewClient() {
+
+                        override fun onPageFinished(view: WebView?, url: String?) {
+                            binding.webViewProgressBar.visibility = View.GONE
+                        }
+                    }
+                    loadUrl(url)
+                }
+                binding.openInWebViewButton.text = getString(R.string.hide_recipe)
+            } else {
+                binding.recipeWebView.visibility = View.GONE
+                binding.webViewProgressBar.visibility = View.GONE
+                binding.openInWebViewButton.text = getString(R.string.open_recipe_here)
+            }
+        }
+    }
+
+    private fun setupWebView() {
+        binding.recipeWebView.apply {
+            settings.javaScriptEnabled = true
+            settings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
         }
     }
 
